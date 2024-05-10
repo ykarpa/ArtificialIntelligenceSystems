@@ -110,6 +110,7 @@
             advanced treadmill is your gateway to a dynamic cardio experience. With customizable programs, a powerful
             motor, and a cushioned deck, each step takes you closer to your fitness goals. Elevate your running game and
             redefine your stride with this cutting-edge treadmill.</p>
+        <button onclick="speakText('Unleash the power of fitness with the PowerMax Treadmill X5000. This sleek and advanced treadmill is your gateway to a dynamic cardio experience. With customizable programs, a powerful motor, and a cushioned deck, each step takes you closer to your fitness goals. Elevate your running game and redefine your stride with this cutting-edge treadmill.')">Play Audio</button>
     </div>
 
     <div class="product">
@@ -120,6 +121,10 @@
             for perfection, these dumbbells feature a durable steel core and ergonomic grips, ensuring a comfortable and
             effective workout. Whether you're a beginner or a seasoned lifter, these pro-grade dumbbells are your key to
             building strength and achieving peak performance.</p>
+        <button onclick="speakText('Lift, tone, and sculpt with the IronGrip Dumbbell Set - Pro Series. Engineered\n'+
+'            for perfection, these dumbbells feature a durable steel core and ergonomic grips, ensuring a comfortable and\n'+
+'            effective workout. Whether you\'re a beginner or a seasoned lifter, these pro-grade dumbbells are your key to\n'+
+'            building strength and achieving peak performance')">Play Audio</button>
     </div>
 
     <div class="product">
@@ -130,6 +135,10 @@
             or gym workouts, these versatile bands offer adjustable resistance for a full-body training experience.
             Target every muscle group and enhance your flexibility with this portable and compact fitness solution.
             Elevate your strength training routine with FlexFit!</p>
+        <button onclick="speakText('Say goodbye to limits with the FlexFit Resistance Bands Kit. Perfect for home\n'+
+'            or gym workouts, these versatile bands offer adjustable resistance for a full-body training experience.\n'+
+'            Target every muscle group and enhance your flexibility with this portable and compact fitness solution.\n'+
+'            Elevate your strength training routine with FlexFit!')">Play Audio</button>
     </div>
 
     <div class="product">
@@ -140,6 +149,10 @@
             This sleek wearable is your personal fitness companion, monitoring heart rate, tracking steps, and analyzing
             sleep patterns. Stay motivated with real-time data and personalized insights. Set your goals, crush them,
             and let PulsePro be your guide to a healthier, more active lifestyle.</p>
+        <button onclick="speakText('Revolutionize your fitness journey with the PulsePro Smart Fitness Tracker.\n'+
+'            This sleek wearable is your personal fitness companion, monitoring heart rate, tracking steps, and analyzing\n'+
+'            sleep patterns. Stay motivated with real-time data and personalized insights. Set your goals, crush them,\n'+
+'            and let PulsePro be your guide to a healthier, more active lifestyle.')">Play Audio</button>
     </div>
 
     <div class="product">
@@ -150,6 +163,10 @@
             Trainer. This elliptical combines smooth, low-impact motion with customizable resistance levels, making it
             perfect for users of all fitness levels. Sculpt and tone your muscles with every stride and take your cardio
             workouts to the next level. Elevate your fitness game with SculptMaster!</p>
+       <button onclick="speakText('Experience total-body transformation with the SculptMaster Elliptical Cross\n'+
+'            Trainer. This elliptical combines smooth, low-impact motion with customizable resistance levels, making it\n'+
+'            perfect for users of all fitness levels. Sculpt and tone your muscles with every stride and take your cardio\n'+
+'            workouts to the next level. Elevate your fitness game with SculptMaster!')">Play Audio</button>
     </div>
 
     <div class="product">
@@ -160,6 +177,10 @@
             Trainer. This elliptical combines smooth, low-impact motion with customizable resistance levels, making it
             perfect for users of all fitness levels. Sculpt and tone your muscles with every stride and take your cardio
             workouts to the next level. Elevate your fitness game with SculptMaster!</p>
+        <button onclick="speakText('Experience total-body transformation with the SculptMaster Elliptical Cross\n'+
+'            Trainer. This elliptical combines smooth, low-impact motion with customizable resistance levels, making it\n'+
+'            perfect for users of all fitness levels. Sculpt and tone your muscles with every stride and take your cardio\n'+
+'            workouts to the next level. Elevate your fitness game with SculptMaster!')">Play Audio</button>
     </div>
 
     <h1>Feedbacks</h1>
@@ -188,6 +209,25 @@
 
                 // Додаємо новий фідбек до вже існуючих
                 document.getElementById('feedbackSection').appendChild(feedbackElement);
+            });
+    }
+
+     function speakText(text) {
+        fetch('/speak_text', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ text: text }),
+        })
+            .then(response => response.blob())
+            .then(blob => {
+                const audioUrl = URL.createObjectURL(blob);
+                const audio = new Audio(audioUrl);
+                audio.play();
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
     }
 

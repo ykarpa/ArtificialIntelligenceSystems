@@ -1,4 +1,5 @@
-import random
+from elevenlabs import play
+from elevenlabs.client import ElevenLabs
 from flask import Flask, render_template, request
 from openai import OpenAI
 
@@ -74,6 +75,24 @@ def generate_feedback():
     # Додаємо фідбек до списку вже відображених
     displayed_feedbacks.append(feedback)
     return feedback
+
+
+@app.route("/speak_text", methods=["POST"])
+def speak_text():
+    clientELevent = ElevenLabs(
+        api_key="cf24f97d19954c07fe6b3f142791132c",
+    )
+    data = request.get_json()
+    text = data["text"]
+
+    # Використовуйте ElevenLabs API для озвучення тексту
+    audio = clientELevent.generate(
+        text=text,
+        voice="Rachel",
+        model="eleven_multilingual_v2"
+    )
+
+    return play(audio)
 
 if __name__ == "__main__":
     app.run(debug=True)
