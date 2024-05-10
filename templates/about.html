@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .product {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .product h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .product p {
+            color: #555;
+        }
+
+        .product img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+                /* Стилізація блоків з фідбеками */
+        #feedbackSection {
+            margin-top: 30px;
+        }
+
+        #feedbackSection p {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <button onclick="goToChatPage()">Chat</button>
+        <button onclick="goToHomePage()">Home</button>
+        <button onclick="generateFeedback()">Generate Feedback</button>
+    </div>
+    <h1>Welcome to GymBro!</h1>
+    <p>Where fitness meets innovation! Elevate your workout experience with our premium selection of exercise equipment.
+        From state-of-the-art cardio machines to strength-training essentials, we've curated the ultimate collection to
+        power your fitness journey. Unleash your full potential and sculpt your dream physique with our high-quality gym
+        equipment. Get ready to transform your workouts, exceed your goals, and embrace a healthier, stronger you.
+        Explore GymBro today – where every rep brings you closer to greatness!</p>
+
+    <h2>List of Products:</h2>
+
+    <div class="product">
+        <img src="./img/PowerMax_Treadmill_X5000_1.png" alt="PowerMax Treadmill X5000">
+        <img src="./img/PowerMax_Treadmill_X5000_2.png" alt="PowerMax Treadmill X5000">
+        <h2>PowerMax Treadmill X5000</h2>
+        <p><strong>Description:</strong> Unleash the power of fitness with the PowerMax Treadmill X5000. This sleek and
+            advanced treadmill is your gateway to a dynamic cardio experience. With customizable programs, a powerful
+            motor, and a cushioned deck, each step takes you closer to your fitness goals. Elevate your running game and
+            redefine your stride with this cutting-edge treadmill.</p>
+    </div>
+
+    <div class="product">
+        <img src="./img/IronGrip_Dumbbel_Set_Pro_Series_1.png" alt="IronGrip Dumbbell Set - Pro Series">
+        <img src="./img/IronGrip_Dumbbel_Set_Pro_Series_2.png" alt="IronGrip Dumbbell Set - Pro Series">
+        <h2>IronGrip Dumbbell Set - Pro Series</h2>
+        <p><strong>Description:</strong> Lift, tone, and sculpt with the IronGrip Dumbbell Set - Pro Series. Engineered
+            for perfection, these dumbbells feature a durable steel core and ergonomic grips, ensuring a comfortable and
+            effective workout. Whether you're a beginner or a seasoned lifter, these pro-grade dumbbells are your key to
+            building strength and achieving peak performance.</p>
+    </div>
+
+    <div class="product">
+        <img src="./img/FlexFit_Resistance_Bands_Kit_1.png" alt="FlexFit Resistance Bands Kit">
+        <img src="./img/FlexFit_Resistance_Bands_Kit_2.png" alt="FlexFit Resistance Bands Kit">
+        <h2>FlexFit Resistance Bands Kit</h2>
+        <p><strong>Description:</strong> Say goodbye to limits with the FlexFit Resistance Bands Kit. Perfect for home
+            or gym workouts, these versatile bands offer adjustable resistance for a full-body training experience.
+            Target every muscle group and enhance your flexibility with this portable and compact fitness solution.
+            Elevate your strength training routine with FlexFit!</p>
+    </div>
+
+    <div class="product">
+        <img src="./img/PulsePro_Smart_Fitness_Tracker_1.png" alt="PulsePro Smart Fitness Tracker">
+        <img src="./img/PulsePro_Smart_Fitness_Tracker_2.png" alt="PulsePro Smart Fitness Tracker">
+        <h2>PulsePro Smart Fitness Tracker</h2>
+        <p><strong>Description:</strong> Revolutionize your fitness journey with the PulsePro Smart Fitness Tracker.
+            This sleek wearable is your personal fitness companion, monitoring heart rate, tracking steps, and analyzing
+            sleep patterns. Stay motivated with real-time data and personalized insights. Set your goals, crush them,
+            and let PulsePro be your guide to a healthier, more active lifestyle.</p>
+    </div>
+
+    <div class="product">
+        <img src="./img/SculptMaster_Elliptical_Cross_Trainer_1.png" alt="SculptMaster Elliptical Cross Trainer">
+        <img src="./img/SculptMaster_Elliptical_Cross_Trainer_2.png" alt="SculptMaster Elliptical Cross Trainer">
+        <h2>SculptMaster Elliptical Cross Trainer</h2>
+        <p><strong>Description:</strong> Experience total-body transformation with the SculptMaster Elliptical Cross
+            Trainer. This elliptical combines smooth, low-impact motion with customizable resistance levels, making it
+            perfect for users of all fitness levels. Sculpt and tone your muscles with every stride and take your cardio
+            workouts to the next level. Elevate your fitness game with SculptMaster!</p>
+    </div>
+
+    <div class="product">
+        <img src="./img/CoreRev_Ab_Roller_Wheel_1.png" alt="CoreRev Ab Roller Wheel">
+        <img src="./img/CoreRev_Ab_Roller_Wheel_2.png" alt="CoreRev Ab Roller Wheel">
+        <h2>SculptMaster Elliptical Cross Trainer</h2>
+        <p><strong>Description:</strong> Experience total-body transformation with the SculptMaster Elliptical Cross
+            Trainer. This elliptical combines smooth, low-impact motion with customizable resistance levels, making it
+            perfect for users of all fitness levels. Sculpt and tone your muscles with every stride and take your cardio
+            workouts to the next level. Elevate your fitness game with SculptMaster!</p>
+    </div>
+
+    <h1>Feedbacks</h1>
+    <div id="feedbackSection"></div>
+</div>
+<script>
+    function goToChatPage() {
+        window.location.href = "/chat";
+    }
+
+    function goToHomePage() {
+        window.location.href = "/";
+    }
+
+    function goToFeedbackPage() {
+        window.location.href = "/feedback";
+    }
+
+    function generateFeedback() {
+        fetch('/generate_feedback')
+            .then(response => response.text())
+            .then(data => {
+                // Створюємо новий елемент <p> для нового фідбеку
+                var feedbackElement = document.createElement('p');
+                feedbackElement.innerHTML = data;
+
+                // Додаємо новий фідбек до вже існуючих
+                document.getElementById('feedbackSection').appendChild(feedbackElement);
+            });
+    }
+
+</script>
+</body>
+</html>
