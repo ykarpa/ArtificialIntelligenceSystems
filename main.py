@@ -1,4 +1,5 @@
 import json
+import random
 
 from elevenlabs import play
 from elevenlabs.client import ElevenLabs
@@ -131,6 +132,32 @@ def generate_random_post():
     message = "Generate a random post for a gym website"
     response = get_post(message)
     return jsonify({'title': 'Random Post', 'content': response})
+
+
+def calculate_discount_price(original_price, discount_percentage):
+    discounted_price = original_price * (1 - (discount_percentage / 100))
+    return round(discounted_price, 2)
+
+
+def generate_discount_percentage():
+    return random.randint(5, 60)
+
+
+def get_random_product():
+    with open('products.json', 'r') as file:
+        products = json.load(file)
+        random_product = random.choice(products)
+        price = random_product['price'].replace('$', '')  # Видаляємо знак долара
+        random_product['price'] = float(price)
+        random_product['discount_percentage'] = generate_discount_percentage()
+        random_product['discounted_price'] = calculate_discount_price(random_product['price'], random_product['discount_percentage'])
+    return random_product
+
+
+@app.route('/random_product')
+def random_product():
+    product = get_random_product()
+    return jsonify(product)
 
 
 if __name__ == "__main__":

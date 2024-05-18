@@ -33,7 +33,7 @@
             margin-bottom: 20px;
         }
 
-        .product {
+        .products {
             margin-bottom: 30px;
             padding: 20px;
             background-color: #f9f9f9;
@@ -49,12 +49,29 @@
             color: #555;
         }
 
-        .product img {
+        .products img {
             display: block;
             margin: 0 auto;
             max-width: 100%;
             border-radius: 8px;
             margin-bottom: 10px;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .product-images {
+            display: flex;
+            justify-content: center;
+        }
+
+        .discount {
+            color: red;
+            font-size: 18px;
         }
 
         .header {
@@ -85,7 +102,8 @@
         }
     </style>
 </head>
-<body>
+<body onload="generateRandomProduct()">
+<div id="randomProductSection"></div>
 <div class="container">
     <div class="header">
         <button onclick="goToChatPage()">Chat</button>
@@ -104,7 +122,7 @@
 
     <div id="productSection">
         {% for product in products %}
-        <div class="product">
+        <div class="products">
             {% for image in product.images %}
             <img src="{{ image }}" alt="{{ product.name }}">
             {% endfor %}
@@ -151,6 +169,29 @@
             body: JSON.stringify({ text: text })
         });
     }
+function generateRandomProduct() {
+    fetch('/random_product')
+        .then(response => response.json())
+        .then(data => {
+            var randomProductSection = document.getElementById('randomProductSection');
+            randomProductSection.innerHTML = `
+                <div class="product">
+                    <div class="product-images">
+                        ${data.images.map(image => `<img src="${image}" alt="${data.name}" style="width: 758px; height: 230px;">`).join('')}
+                    </div>
+                    <h3>${data.name}</h3>
+                    ${data.discount_percentage && data.discounted_price ? `
+                        <p>
+                            <span class="discount">${data.discount_percentage}% OFF</span><br>
+                            <span class="old-price">Old Price: $${data.price}</span><br>
+                            <span class="new-price" style="color: red">New Price: $${data.discounted_price}</span>
+                        </p>` : `
+                        <p><span>$${data.price}</span></p>`
+                    }
+                </div>
+            `;
+        });
+}
 </script>
 </body>
 </html>
