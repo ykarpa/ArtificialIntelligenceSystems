@@ -1,3 +1,5 @@
+import json
+
 from elevenlabs import play
 from elevenlabs.client import ElevenLabs
 from flask import Flask, render_template, request, jsonify
@@ -61,7 +63,9 @@ def generate_random_feedback():
 # Головна сторінка
 @app.route("/")
 def index():
-    return render_template("about.html")
+    with open('products.json', 'r') as file:
+        products = json.load(file)
+    return render_template("about.html", products=products)
 
 
 # Сторінка чату

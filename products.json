@@ -1,0 +1,56 @@
+[
+    {
+        "images": [
+            "static/img/PowerMax_Treadmill_X5000_1.png",
+            "static/img/PowerMax_Treadmill_X5000_2.png"
+        ],
+        "name": "PowerMax Treadmill X5000",
+        "description": "Unleash the power of fitness with the PowerMax Treadmill X5000. This sleek and advanced treadmill is your gateway to a dynamic cardio experience. With customizable programs, a powerful motor, and a cushioned deck, each step takes you closer to your fitness goals. Elevate your running game and redefine your stride with this cutting-edge treadmill.",
+        "price": "$1,200"
+    },
+    {
+        "images": [
+            "static/img/IronGrip_Dumbbel_Set_Pro_Series_1.png",
+            "static/img/IronGrip_Dumbbel_Set_Pro_Series_2.png"
+        ],
+        "name": "IronGrip Dumbbell Set - Pro Series",
+        "description": "Lift, tone, and sculpt with the IronGrip Dumbbell Set - Pro Series. Engineered for perfection, these dumbbells feature a durable steel core and ergonomic grips, ensuring a comfortable and effective workout. Whether you're a beginner or a seasoned lifter, these pro-grade dumbbells are your key to building strength and achieving peak performance.",
+        "price": "$300"
+    },
+    {
+        "images": [
+            "static/img/FlexFit_Resistance_Bands_Kit_1.png",
+            "static/img/FlexFit_Resistance_Bands_Kit_2.png"
+        ],
+        "name": "FlexFit Resistance Bands Kit",
+        "description": "Say goodbye to limits with the FlexFit Resistance Bands Kit. Perfect for home or gym workouts, these versatile bands offer adjustable resistance for a full-body training experience. Target every muscle group and enhance your flexibility with this portable and compact fitness solution. Elevate your strength training routine with FlexFit!",
+        "price": "$45"
+    },
+    {
+        "images": [
+            "static/img/PulsePro_Smart_Fitness_Tracker_1.png",
+            "static/img/PulsePro_Smart_Fitness_Tracker_2.png"
+        ],
+        "name": "PulsePro Smart Fitness Tracker",
+        "description": "Revolutionize your fitness journey with the PulsePro Smart Fitness Tracker. This sleek wearable is your personal fitness companion, monitoring heart rate, tracking steps, and analyzing sleep patterns. Stay motivated with real-time data and personalized insights. Set your goals, crush them, and let PulsePro be your guide to a healthier, more active lifestyle.",
+        "price": "$150"
+    },
+    {
+        "images": [
+            "static/img/SculptMaster_Elliptical_Cross_Trainer_1.png",
+            "static/img/SculptMaster_Elliptical_Cross_Trainer_2.png"
+        ],
+        "name": "SculptMaster Elliptical Cross Trainer",
+        "description": "Experience total-body transformation with the SculptMaster Elliptical Cross Trainer. This elliptical combines smooth, low-impact motion with customizable resistance levels, making it perfect for users of all fitness levels. Sculpt and tone your muscles with every stride and take your cardio workouts to the next level. Elevate your fitness game with SculptMaster!",
+        "price": "$800"
+    },
+    {
+        "images": [
+            "static/img/CoreRev_Ab_Roller_Wheel_1.png",
+            "static/img/CoreRev_Ab_Roller_Wheel_2.png"
+        ],
+        "name": "CoreRev Ab Roller Wheel",
+        "description": "Experience total-body transformation with the SculptMaster Elliptical Cross Trainer. This elliptical combines smooth, low-impact motion with customizable resistance levels, making it perfect for users of all fitness levels. Sculpt and tone your muscles with every stride and take your cardio workouts to the next level. Elevate your fitness game with SculptMaster!",
+        "price": "$30"
+    }
+]
